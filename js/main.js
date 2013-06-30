@@ -3,11 +3,14 @@ $(function(){
   $('video, object').maximage('maxcover');
 
   // nav
-  $('nav').fitText(1.7);
+  $('nav').fitText(1.99);
 
   $('nav a').on('click', function(){
 
     var target = $(this).attr('class').replace(' active', '');
+
+    // toggle active class
+    $( this ).addClass('active').siblings().removeClass('active');
 
     // hide, mute and pause all vids
     $('section').removeClass('active').find('video').prop('muted', true).each(function(){
@@ -20,7 +23,7 @@ $(function(){
   });
 
   // video stuff
-  $('video').prop('muted', true);
+  $('section').not('.active').find('video').prop('muted', true);
 
   // toggle audio on click
   $('video').on('click', function(){

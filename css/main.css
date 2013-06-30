@@ -135,7 +135,14 @@ h2 {
     margin: 0;
 }
 
-nav a.active {
+nav a.story,
+nav a.rsvp,
+nav a.contact {
+    color: black;
+}
+
+nav a.active,
+nav a:hover {
     color: red;
 }
 
