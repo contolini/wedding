@@ -1,0 +1,14 @@
+{
+  "name": "Wedding",
+  "version": "0.1.0",
+  "devDependencies": {
+    "jquery": "~1.10.1",
+    "normalize-css": "~2.1.2",
+    "FitText.js": "latest",
+    "video.js": "latest",
+    "modernizr": "latest"
+  },
+  "dependencies": {
+    "jquery-ui": "~1.10.3"
+  }
+}

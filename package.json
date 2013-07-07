@@ -1,0 +1,42 @@
+{
+  "name": "contolini-wedding",
+  "description": "Wedding Website",
+  "version": "0.1.0",
+  "homepage": "http://wedding.contolini.com",
+  "author": {
+    "name": "Chris Contolini",
+    "email": "chris@contolini.com",
+    "url": "http://contolini.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:contolini/wedding.contolini.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com:contolini/wedding.contolini.com/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-notify": "~0.2.4",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-less": "~0.6.0",
+    "grunt-shell": "~0.2.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.6.1"
+  },
+  "keywords": []
+}
