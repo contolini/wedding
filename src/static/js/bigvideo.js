@@ -17,7 +17,7 @@
       // If you are doing a playlist, the video won't play the first time
       // on a touchscreen unless the play event is attached to a user click
       forceAutoplay:false,
-      controls:true,
+      controls:false,
       doLoop:false,
       container:$('body')
         };
@@ -196,7 +196,7 @@
         player.ready(function(){
           player.volume(defaultVolume);
         });
-        doLoop = false;
+        doLoop = true;
       }
       $('#big-video-image').css('display','none');
       $(vidEl).css('display','block');

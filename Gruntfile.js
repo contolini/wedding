@@ -146,7 +146,8 @@ module.exports = function(grunt) {
             'src/static/vendor/jquery-ui/ui/jquery.ui.slider.js',
             'src/static/vendor/imagesloaded/imagesloaded.min.js',
             'src/static/vendor/video.js/video.js',
-            'src/static/vendor/FitText.js/jquery.fittext.js',
+            //'src/static/vendor/FitText.js/jquery.fittext.js',
+            //'src/static/vendor/BigVideo.js/js/bigvideo.js',
             'src/static/js/bigvideo.js',
             'src/static/js/plugins.js',
             'src/static/js/main.js'

@@ -6,9 +6,8 @@
     "normalize-css": "~2.1.2",
     "FitText.js": "latest",
     "video.js": "latest",
-    "modernizr": "latest"
-  },
-  "dependencies": {
-    "jquery-ui": "~1.10.3"
+    "modernizr": "latest",
+    "jquery-ui": "~1.10.3",
+    "BigVideo.js": "https://github.com/dfcb/BigVideo.js.git#~1.0.0"
   }
 }

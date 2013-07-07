@@ -2,7 +2,11 @@
 
 @import (less) "vendor/normalize-css/normalize.css";
 @import (less) "vendor/video.js/video-js.css";
+@import (less) "vendor/BigVideo.js/css/bigvideo.css";
 
+// Mixins
+
+@import "less/mixins.less";
 
 /*
  * HTML5 Boilerplate
@@ -110,7 +114,7 @@ nav {
     text-transform: uppercase;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     text-align: center;
 }
 
@@ -155,21 +159,50 @@ section.active {
 }
 
 .msg {
-    width: 80%;
-    margin: 20px auto 0;
+    margin: 20px 8.5%;
     padding: 10px 25px;
     background-color: white;
     background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 12%;
 }
 
+.vjs-loading-spinner {
+
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    .msg {
+        //margin: 20px 10%;
+        bottom: 6%;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
     nav li {
         display: block;
         width: 100%;
     }
+    .msg {
+        //margin: 20px 5%;
+    }
 }
 
-
+#big-video-control-container {
+    width: 93%;
+    padding: 0 20px 0 40px;
+}
 
 
 
