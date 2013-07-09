@@ -110,10 +110,17 @@ $(function(){
   // RSVP submission
   $('form.rsvp').on('submit', function(){
 
-    var $name = $('#name');
+    var $req = $('.required'),
+        $name = $('#name'),
+        $attending = $('#attending');
 
     if ( $name.val().length < 3 ) {
       $name.addClass('missing').attr('placeholder', '').focus();
+      return false;
+    }
+
+    if ( $attending.val().length < 2 ) {
+      $attending.addClass('missing').focus();
       return false;
     }
 

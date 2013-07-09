@@ -38,11 +38,12 @@
                 <form action="https://docs.google.com/forms/d/1apA2Eg45kVel3WmGwebt5g7Wpe78brh7cdbmajd33vo/formResponse" method="POST" class="rsvp">
                     <p>
                         My name is 
-                        <input type="text" id="name" value="" placeholder="Jane Doe" name="entry.419539077"> 
+                        <input type="text" id="name" class="required" value="" placeholder="Jane Doe" name="entry.419539077"> 
                         and I 
-                        <select name="entry.1782172114" id="attending">
-                          <option value="Yes">will absolutely</option>
-                          <option value="No">very sadly, will not</option>
+                        <select name="entry.1782172114" id="attending" class="required">
+                            <option value="0" selected></option>
+                            <option value="Yes">will absolutely</option>
+                            <option value="No">very sadly, will not</option>
                         </select> 
                         be attending your wedding ceremony taking place on August 17 in Lake Oswego, OR.
                     </p>

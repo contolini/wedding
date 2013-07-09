@@ -128,14 +128,16 @@ nav {
     bottom: 10px;
     left: 30px;
 
-    a,
-    a:visited {
+    a {
         display: inline-block;
         margin: 0;
         padding: 0;
         font-weight: 800;
         text-decoration: none;
         color: #fff;
+        &:visited {
+            color: #fff;
+        }
     }
 
 }
@@ -266,7 +268,7 @@ section.active {
     }
 }
 
-input.missing {
+form .missing {
     background-color: red;
 }
 
