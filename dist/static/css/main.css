@@ -1154,7 +1154,8 @@ nav a {
   text-decoration: none;
   color: #fff;
 }
-nav a:visited {
+nav a:visited,
+nav a:link {
   color: #fff;
 }
 p {
@@ -1164,11 +1165,6 @@ h2 {
   text-transform: uppercase;
   font-size: 70px;
   margin: 0;
-}
-nav a.story,
-nav a.rsvp,
-nav a.contact {
-  color: #fff;
 }
 nav a.active,
 nav a:hover {
