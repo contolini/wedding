@@ -1268,7 +1268,7 @@ section.active {
   color: white;
   padding: 2px 5px;
 }
-input.missing {
+form .missing {
   background-color: red;
 }
 /* ==========================================================================
