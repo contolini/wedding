@@ -8,6 +8,7 @@
     "video.js": "latest",
     "modernizr": "latest",
     "jquery-ui": "~1.10.3",
-    "BigVideo.js": "https://github.com/dfcb/BigVideo.js.git#~1.0.0"
+    "BigVideo.js": "https://github.com/dfcb/BigVideo.js.git#~1.0.0",
+    "imagesloaded": "~3.0.1"
   }
 }

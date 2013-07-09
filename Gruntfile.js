@@ -121,6 +121,8 @@ module.exports = function(grunt) {
       packageExample: {
         command: [
           'cp src/* dist/',
+          'cp -r src/static/img dist/static',
+          'cp -r src/static/vid dist/static',
           'cp src/static/vendor/video.js/video-js.swf dist/static/video-js.swf'
         ].join('&&')
       }
@@ -144,10 +146,13 @@ module.exports = function(grunt) {
             'src/static/vendor/jquery-ui/ui/jquery-ui.js',
             'src/static/vendor/jquery-ui/ui/jquery.ui.mouse.js',
             'src/static/vendor/jquery-ui/ui/jquery.ui.slider.js',
-            'src/static/vendor/imagesloaded/imagesloaded.min.js',
+            'src/static/vendor/eventEmitter/EventEmitter.js',
+            'src/static/vendor/eventie/eventie.js',
+            'src/static/vendor/imagesloaded/imagesloaded.js',
             'src/static/vendor/video.js/video.js',
             //'src/static/vendor/FitText.js/jquery.fittext.js',
             //'src/static/vendor/BigVideo.js/js/bigvideo.js',
+            'src/static/js/detectmobilebrowser.js',
             'src/static/js/bigvideo.js',
             'src/static/js/plugins.js',
             'src/static/js/main.js'

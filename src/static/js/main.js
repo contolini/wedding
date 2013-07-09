@@ -49,11 +49,20 @@ $(function(){
   videojs.options.flash.swf = "/video-js.swf";
 
   // Set up big.js for full-screen bg video
-  var BV = new $.BigVideo();
-  BV.init();
-  BV.show('http://dfcb.github.io/BigVideo.js/vids/dock.mp4');
+  var BV = new $.BigVideo(),
+      isMobile = $.browser.mobile,
+      bg;
 
-  // nav
+  BV.init();
+
+  if ( isMobile ) {
+    bg = '/static/img/hBqv0KrQ6pa.gif';
+  } else {
+    bg = '/static/vid/hBqv0KrQ6pa.mp4';
+  }
+  BV.show( bg );
+
+  // Nav, yo
   $('nav').fitText(1.99);
 
   $('nav a').on('click', function(){
@@ -69,10 +78,25 @@ $(function(){
     // show, unmute and play selected vid
     $( 'section.' + target ).addClass('active');
 
-    // Change vid
-    var vid = $( this ).attr('data-vid');
-    BV.show( vid );
+    // Change vid/pic
+    if ( !isMobile ) {
+      bg = $( this ).attr('data-pic');
+    } else {
+      bg = $( this ).attr('data-vid');
+    }
+    BV.show( bg );
 
+  });
+
+  // toggle audio on click
+  $('#big-video-vid').on('click', function(){
+    if ( $(this).hasClass('muted') ) {
+      BV.getPlayer().volume(1);
+      $(this).removeClass('muted');
+    } else {
+      BV.getPlayer().volume(0);
+      $(this).addClass('muted');
+    }
   });
 
 
