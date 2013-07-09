@@ -1153,11 +1153,11 @@ h2 {
 nav a.story,
 nav a.rsvp,
 nav a.contact {
-  color: black;
+  color: #fff;
 }
 nav a.active,
 nav a:hover {
-  color: red;
+  background-color: #000;
 }
 section {
   display: none;
@@ -1203,6 +1203,10 @@ section.active {
 #big-video-control-container {
   width: 93%;
   padding: 0 20px 0 40px;
+}
+#big-video-image {
+  width: 100%;
+  height: 100%;
 }
 /* ==========================================================================
    Helper classes
