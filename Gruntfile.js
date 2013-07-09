@@ -123,6 +123,7 @@ module.exports = function(grunt) {
           'cp src/* dist/',
           'cp -r src/static/img dist/static',
           'cp -r src/static/vid dist/static',
+          'cp -r src/static/vendor/video.js/font dist/static/css',
           'cp src/static/vendor/video.js/video-js.swf dist/static/video-js.swf'
         ].join('&&')
       }

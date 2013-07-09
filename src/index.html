@@ -18,9 +18,9 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <section class="story active">
+        <section class="story">
             <div class="msg">
-                <h2>The Story</h2>
+                <h2>Story</h2>
                 <p>Lorem ipsum Commodo mollit culpa consectetur culpa consequat adipisicing anim cillum velit magna sunt est culpa dolore Excepteur fugiat minim sit cillum nulla cupidatat enim deserunt aute ullamco cupidatat Duis id veniam amet velit enim id fugiat proident aliqua elit proident aliquip laboris in labore officia dolore veniam exercitation ut consectetur proident ea eiusmod laboris Excepteur sint enim id consectetur incididunt est laboris pariatur esse consequat incididunt consectetur et velit reprehenderit pariatur nostrud officia incididunt esse veniam dolor et adipisicing aliqua ut ut cupidatat dolor eiusmod eiusmod sint officia cillum eu anim dolor reprehenderit sit ut aliqua ut mollit exercitation esse aliquip dolore nisi dolore esse enim aliquip sunt Ut laboris voluptate dolore cupidatat magna magna aliqua id aute eu nostrud ut aliqua commodo sint dolore eiusmod cillum sed pariatur est fugiat in amet quis aliqua irure nostrud in incididunt in tempor qui fugiat quis nostrud mollit labore exercitation dolore id mollit quis cillum enim sit elit exercitation cillum mollit occaecat esse dolor pariatur pariatur fugiat occaecat tempor.</p>
             </div>
         </section>
@@ -35,35 +35,67 @@
         <section class="rsvp">
             <div class="msg">
                 <h2>RSVP</h2>
-                <p>
-                    My name is 
-                    <input type="text" name="name" value="" placeholder="Jane Doe"> 
-                    and I 
-                    <select name="attending" id="attending">
-                      <option value="yes">will</option>
-                      <option value="no">will not</option>
-                    </select> 
-                    be attending the joyous festivities taking place on August 17.
-                </p>
+                <form action="https://docs.google.com/forms/d/1apA2Eg45kVel3WmGwebt5g7Wpe78brh7cdbmajd33vo/formResponse" method="POST" class="rsvp">
+                    <p>
+                        My name is 
+                        <input type="text" id="name" value="" placeholder="Jane Doe" name="entry.419539077"> 
+                        and I 
+                        <select name="entry.1782172114" id="attending">
+                          <option value="Yes">will absolutely</option>
+                          <option value="No">very sadly, will not</option>
+                        </select> 
+                        be attending your wedding ceremony taking place on August 17 in Lake Oswego, OR.
+                    </p>
+                    <div class="additional-details">
+                        <p>
+                            Afterward, I
+                            <select name="entry.43352014">
+                              <option value="Yes">will</option>
+                              <option value="No">will not</option>
+                            </select>
+                            be attending the reception at Sellwood Park in Portland, OR where I
+                            <select name="entry.867746242" id="attending">
+                              <option value="Yes">will eat lots of meat</option>
+                              <option value="No">will not eat meat</option>
+                            </select>
+                            . There are a total of
+                            <select name="entry.1770765566">
+                              <option value="1">1</option>
+                              <option value="2" selected>2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                            people in my party.
+                        </p>
+                        <p>
+                            I hear you will be floating down the Clackamas river with picnic supplies two days before the wedding on August 15. I 
+                            <select name="entry.808949738">
+                              <option value="Cool!">would</option>
+                              <option value="Sorry, nah" selected>would not</option>
+                            </select>
+                            like to join you for this mellow rafting adventure.
+                        </p>
+                    </div>
+                    <input type="submit" name="submit" value="Submit" class="submit">
+                </form>
             </div>
         </section>
 
         <section class="registry">
             <div class="msg">
                 <h2>Registry</h2>
-                <p>Lorem ipsum Commodo mollit culpa consectetur culpa consequat adipisicing anim cillum velit magna sunt est culpa dolore Excepteur fugiat minim sit cillum nulla cupidatat enim deserunt aute ullamco cupidatat Duis id veniam amet velit enim id fugiat proident aliqua elit proident aliquip laboris in labore officia dolore veniam exercitation ut consectetur proident ea eiusmod laboris Excepteur sint enim id consectetur incididunt est laboris pariatur esse consequat incididunt consectetur et velit reprehenderit pariatur nostrud officia incididunt esse veniam dolor et adipisicing aliqua ut ut cupidatat dolor eiusmod eiusmod sint officia cillum eu anim dolor reprehenderit sit ut aliqua ut mollit exercitation esse aliquip dolore nisi dolore esse enim aliquip sunt Ut laboris voluptate dolore cupidatat magna magna aliqua id aute eu nostrud ut aliqua commodo sint dolore eiusmod cillum sed pariatur est fugiat in amet quis aliqua irure nostrud in incididunt in tempor qui fugiat quis nostrud mollit labore exercitation dolore id mollit quis cillum enim sit elit exercitation cillum mollit occaecat esse dolor pariatur pariatur fugiat occaecat tempor.</p>
-            </div>
-        </section>
-
-        <section class="contact">
-            <div class="msg">
-                <h2>Contact</h2>
-                <p>Lorem ipsum Commodo mollit culpa consectetur culpa consequat adipisicing anim cillum velit magna sunt est culpa dolore Excepteur fugiat minim sit cillum nulla cupidatat enim deserunt aute ullamco cupidatat Duis id veniam amet velit enim id fugiat proident aliqua elit proident aliquip laboris in labore officia dolore veniam exercitation ut consectetur proident ea eiusmod laboris Excepteur sint enim id consectetur incididunt est laboris pariatur esse consequat incididunt consectetur et velit reprehenderit pariatur nostrud officia incididunt esse veniam dolor et adipisicing aliqua ut ut cupidatat dolor eiusmod eiusmod sint officia cillum eu anim dolor reprehenderit sit ut aliqua ut mollit exercitation esse aliquip dolore nisi dolore esse enim aliquip sunt Ut laboris voluptate dolore cupidatat magna magna aliqua id aute eu nostrud ut aliqua commodo sint dolore eiusmod cillum sed pariatur est fugiat in amet quis aliqua irure nostrud in incididunt in tempor qui fugiat quis nostrud mollit labore exercitation dolore id mollit quis cillum enim sit elit exercitation cillum mollit occaecat esse dolor pariatur pariatur fugiat occaecat tempor.</p>
+                <div class="media">
+                    <a href="http://www.myregistry.com/public/hilaryandchris"><img src="http://i.imgur.com/GKxtaJF.png" alt="Horse head mask"></a>
+                </div>
+                <p>We are registered at <a href="http://www.myregistry.com/public/hilaryandchris">myregistry.com</a> and have used it to link to all sorts of exciting things all over the interwebz.</p>
+                <p>We recently purchased a 100-year-old dilapidated house so if you have any used tools you'd like to donate to us, we'd greatly appreciate it.</p>
+                <p></p>
             </div>
         </section>
 
         <nav>
-            <a href="#" data-vid="/static/vid/h75HdDab6BP.mp4" data-pic="/static/img/h75HdDab6BP.gif" class="story active">Story</a><a href="#" data-vid="http://dfcb.github.io/BigVideo.js/vids/dock.mp4" data-pic="/static/img/hBqv0KrQ6pa.gif" class="ceremony">Ceremony</a><a href="#" data-vid="http://dfcb.github.io/BigVideo.js/vids/frontier.mp4" data-pic="/static/img/bL9xwTWbwEv.gif" class="rsvp">RSVP</a><a href="#" data-vid="http://dfcb.github.io/BigVideo.js/vids/dock.mp4" data-pic="/static/img/hBqv0KrQ6pa.gif" class="registry">Registry</a><a href="#" data-vid="http://dfcb.github.io/BigVideo.js/vids/river.mp4" data-pic="/static/img/bL9xwTWbwEv.gif" class="contact">Contact</a>
+            <a href="#" data-vid="/static/vid/h75HdDab6BP.mp4" data-pic="/static/img/h75HdDab6BP.gif" class="story">Story</a><a href="#" data-vid="/static/vid/bL9xwTWbwEv.mp4" data-pic="/static/img/hBqv0KrQ6pa.gif" class="ceremony">Ceremony</a><a href="#" data-vid="http://dfcb.github.io/BigVideo.js/vids/frontier.mp4" data-pic="/static/img/bL9xwTWbwEv.gif" class="rsvp">RSVP</a><a href="#" data-vid="http://dfcb.github.io/BigVideo.js/vids/dock.mp4" data-pic="/static/img/hBqv0KrQ6pa.gif" class="registry">Registry</a>
         </nav>
 
         <script src="static/js/main.min.js"></script>

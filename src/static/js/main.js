@@ -26,7 +26,6 @@
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
         var fontSize = Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize));
-        //console.log(fontSize);
         $this.css('font-size', fontSize > 72 ? 72 : fontSize );
       };
 
@@ -42,30 +41,27 @@
 
 })( jQuery );
 
+var BV = new $.BigVideo();
 
 $(function(){
 
   // Video.js config
   videojs.options.flash.swf = "/video-js.swf";
 
-  // Set up big.js for full-screen bg video
-  var BV = new $.BigVideo(),
-      isMobile = $.browser.mobile,
+  // Set up bigvideo.js for full-screen bg video
+  var isMobile = $.browser.mobile,
+      volume = 1,
       bg;
 
   BV.init();
 
-  if ( isMobile ) {
-    bg = '/static/img/hBqv0KrQ6pa.gif';
-  } else {
-    bg = '/static/vid/hBqv0KrQ6pa.mp4';
-  }
+  bg = isMobile ? '/static/img/hBqv0KrQ6pa.gif' : '/static/vid/hBqv0KrQ6pa.mp4';
   BV.show( bg );
 
   // Nav, yo
-  $('nav').fitText(1.99);
+  $('nav').fitText(1.5);
 
-  $('nav a').on('click', function(){
+  $('nav a').on('click', function( ev ){
 
     var target = $(this).attr('class').replace(' active', '');
 
@@ -79,60 +75,71 @@ $(function(){
     $( 'section.' + target ).addClass('active');
 
     // Change vid/pic
-    if ( isMobile ) {
-      bg = $( this ).attr('data-pic');
-    } else {
-      bg = $( this ).attr('data-vid');
-    }
+    bg = isMobile ? $( this ).attr('data-pic') : $( this ).attr('data-vid');
     BV.show( bg );
+
+    // Focus if on RSVP form
+    if ( $(this).hasClass('rsvp') ) {
+      $('#name').focus();
+    }
+
+    ev.preventDefault();
 
   });
 
   // toggle audio on click
   $('#big-video-vid').on('click', function(){
-    if ( $(this).hasClass('muted') ) {
-      BV.getPlayer().volume(1);
-      $(this).removeClass('muted');
-    } else {
-      BV.getPlayer().volume(0);
-      $(this).addClass('muted');
-    }
-  });
 
-
-
-
-
-
-
-
-
-/*
-  $('nav a').on('click', function(){
-
-    var target = $(this).attr('class').replace(' active', '');
-
-    // toggle active class
-    $( this ).addClass('active').siblings().removeClass('active');
-
-    // hide, mute and pause all vids
-    $('section').removeClass('active').find('video').prop('muted', true).each(function(){
-      $(this).get(0).pause();
-    });
-
-    // show, unmute and play selected vid
-    $( 'section.' + target ).addClass('active').find('video').prop('muted', false).get(0).play();
+    BV.getPlayer().volume( volume ^= 1 );
 
   });
-
-  // video stuff
-  $('section').not('.active').find('video').prop('muted', true);
 
   // toggle audio on click
-  $('video').on('click', function(){
-    $(this).prop('muted', function( i, val ) {
-      return !val;
-    });
+  $('#attending').on('change', function(){
+
+    var $deets = $('.additional-details');
+
+    if ( $( this ).val() === 'Yes' ) {
+      $deets.show();
+    } else {
+      $deets.hide();
+    }
+
   });
-*/
+
+  // RSVP submission
+  $('form.rsvp').on('submit', function(){
+
+    var $name = $('#name');
+
+    if ( $name.val().length < 3 ) {
+      $name.addClass('missing').attr('placeholder', '').focus();
+      return false;
+    }
+
+  });
+
+  // This listener may explode your browser -- NO TIME TO DEBOUNCE
+  $(window).on('resize', resizeMsg);
+
+  function resizeMsg() {
+
+    if ( $(window).width() > 767 ) {
+
+      var $reg = $('nav .registry'),
+        width = $reg.offset().left + $reg.width();
+
+      $('.msg').css( 'width', width + 'px' );
+
+    } else {
+
+      $('.msg').attr('style', '');
+
+    }
+
+  }
+
+  resizeMsg();
+
+
 });
