@@ -79,7 +79,7 @@ $(function(){
     $( 'section.' + target ).addClass('active');
 
     // Change vid/pic
-    if ( !isMobile ) {
+    if ( isMobile ) {
       bg = $( this ).attr('data-pic');
     } else {
       bg = $( this ).attr('data-vid');
