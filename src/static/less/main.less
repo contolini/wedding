@@ -217,6 +217,9 @@ section.active {
         left: 0;
         bottom: 17%;
     }
+    .flex img {
+        display: none;
+    }
 }
 
 #big-video-control-container {
@@ -267,7 +270,25 @@ form .missing {
     background-color: red;
 }
 
+.flex {
+    img {
+        width: 48%;
+        margin-right: 4%;
+        float: left;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &:before,
+    &:after {
+        content: " ";
+        display: table; 
+    }
 
+    &:after {
+        clear: both;
+    }
+}
 
 
 

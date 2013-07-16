@@ -1226,6 +1226,9 @@ section.active {
     left: 0;
     bottom: 17%;
   }
+  .flex img {
+    display: none;
+  }
 }
 #big-video-control-container {
   width: 93%;
@@ -1266,6 +1269,22 @@ section.active {
 }
 form .missing {
   background-color: red;
+}
+.flex img {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+}
+.flex img:last-child {
+  margin-right: 0;
+}
+.flex:before,
+.flex:after {
+  content: " ";
+  display: table;
+}
+.flex:after {
+  clear: both;
 }
 /* ==========================================================================
    Helper classes
