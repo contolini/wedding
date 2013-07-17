@@ -56,7 +56,7 @@ $(function(){
   BV.init();
 
   bg = isMobile ? '/static/img/hBqv0KrQ6pa.gif' : '/static/vid/hBqv0KrQ6pa.mp4';
-  BV.show( bg );
+  BV.show( bg, { altSource: bg.replace('mp4', 'ogv') } );
 
   // Nav, yo
   $('nav').fitText(1.5);
@@ -76,7 +76,7 @@ $(function(){
 
     // Change vid/pic
     bg = isMobile ? $( this ).attr('data-pic') : $( this ).attr('data-vid');
-    BV.show( bg );
+    BV.show( bg, { altSource: bg.replace('mp4', 'ogv') } );
 
     // Focus if on RSVP form
     if ( $(this).hasClass('rsvp') ) {
