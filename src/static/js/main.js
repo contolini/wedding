@@ -41,7 +41,7 @@
 
 })( jQuery );
 
-var BV = new $.BigVideo();
+var BV = new $.BigVideo({useFlashForFirefox:false});
 
 $(function(){
 
