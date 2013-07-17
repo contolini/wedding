@@ -138,23 +138,21 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         banner: '<%= banner.jquery %> <%= banner.sizzle %>',
-        //beautify: true,
-        //mangle: false,
-        //compress: false
+        beautify: true,
+        mangle: false,
+        compress: false
       },
       main: {
         files: {
           'dist/static/js/main.min.js': [
-            'src/static/vendor/jquery/jquery.js',
-            'src/static/vendor/jquery-ui/ui/jquery-ui.js',
-            'src/static/vendor/jquery-ui/ui/jquery.ui.mouse.js',
-            'src/static/vendor/jquery-ui/ui/jquery.ui.slider.js',
+            //'src/static/vendor/jquery/jquery.js',
+            //'src/static/vendor/jquery-ui/ui/jquery-ui.js',
+            //'src/static/vendor/jquery-ui/ui/jquery.ui.mouse.js',
+            //'src/static/vendor/jquery-ui/ui/jquery.ui.slider.js',
             'src/static/vendor/eventEmitter/EventEmitter.js',
             'src/static/vendor/eventie/eventie.js',
             'src/static/vendor/imagesloaded/imagesloaded.js',
-            'src/static/vendor/video.js/video.js',
-            //'src/static/vendor/FitText.js/jquery.fittext.js',
-            //'src/static/vendor/BigVideo.js/js/bigvideo.js',
+            //'src/static/vendor/video.js/video.js',
             'src/static/js/detectmobilebrowser.js',
             'src/static/js/bigvideo.js',
             'src/static/js/plugins.js',
