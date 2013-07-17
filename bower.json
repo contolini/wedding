@@ -1,13 +1,17 @@
 {
-  "name": "Wedding",
-  "version": "0.1.0",
-  "devDependencies": {
-    "jquery": "~1.10.1",
-    "normalize-css": "~2.1.2",
-    "FitText.js": "latest",
-    "video.js": "latest",
-    "modernizr": "latest",
-    "jquery-ui": "~1.10.3",
-    "BigVideo.js": "https://github.com/dfcb/BigVideo.js.git#~1.0.0"
+  "name": "video.js",
+  "version": "4.0.3",
+  "main": [
+    "video.js",
+    "video.css"
+  ],
+  "gitHead": "80a42cc8183a70266c143cbd96fbdca1b6db660f",
+  "readme": "video.js-component\n==================\n\nRepo for bower and component(1) files\n",
+  "readmeFilename": "README.md",
+  "_id": "video.js@4.0.3",
+  "description": "video.js-component ==================",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/videojs/video.js-component.git"
   }
 }
