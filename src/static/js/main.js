@@ -126,27 +126,5 @@ $(function(){
 
   });
 
-  // This listener may explode your browser -- NO TIME TO DEBOUNCE
-  $(window).on('resize', resizeMsg);
-
-  function resizeMsg() {
-
-    if ( $(window).width() > 767 ) {
-
-      var $reg = $('nav .registry'),
-        width = $reg.offset().left + $reg.width();
-
-      $('.msg').css( 'width', width + 'px' );
-
-    } else {
-
-      $('.msg').attr('style', '');
-
-    }
-
-  }
-
-  resizeMsg();
-
 
 });
