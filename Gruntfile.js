@@ -138,7 +138,9 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         banner: '<%= banner.jquery %> <%= banner.sizzle %>',
-        beautify: true
+        //beautify: true,
+        //mangle: false,
+        //compress: false
       },
       main: {
         files: {
