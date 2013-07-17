@@ -1229,7 +1229,7 @@ section.active {
     left: 0;
     bottom: 17%;
   }
-  .flex img {
+  img.flex {
     display: none;
   }
 }
@@ -1273,22 +1273,10 @@ section.active {
 form .missing {
   background-color: red;
 }
-.flex img {
-  width: 48%;
-  max-width: 300px;
-  margin-right: 4%;
+img.flex {
   float: left;
-}
-.flex img:last-child {
-  margin-right: 0;
-}
-.flex:before,
-.flex:after {
-  content: " ";
-  display: table;
-}
-.flex:after {
-  clear: both;
+  padding-right: 10px;
+  max-width: 300px;
 }
 /* ==========================================================================
    Helper classes
